@@ -12,7 +12,7 @@ RUN apk --no-cache --update add git autoconf automake libtool g++=6.4.0-r5 pkgco
 	&& cd db-4.8.30.NC/build_unix/ \
 	&& ../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX \
 	&& make install \
-	cd $BITCOIN_ROOT \
+	&& cd $BITCOIN_ROOT \
 	&& ./autogen.sh \
 	&& ./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" \
 	&& make -j4
