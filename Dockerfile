@@ -15,4 +15,4 @@ RUN apk --no-cache --update add git autoconf automake libtool g++=6.4.0-r5 pkgco
 	cd $BITCOIN_ROOT \
 	&& ./autogen.sh \
 	&& ./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" \
-	&& make
+	&& make -j4
