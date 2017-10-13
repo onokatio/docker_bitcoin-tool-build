@@ -14,8 +14,8 @@ RUN mkdir /bitcoin-build \
 && cd /bitcoin-build \
 && ./autogen.sh \
 && ./configure --with-incompatible-bdb --with-gui=qt5 --with-utils --disable-ccache --disable-static --enable-hardening \
-#&& make --jobs="${make_worker}" \
-&& make -j \
+# && make -j" \
+&& make --jobs="${make_worker}" \
 && make check
 
 CMD ["sh"]
