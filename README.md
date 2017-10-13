@@ -1,5 +1,10 @@
 # docker_bitcoin-tool-build
 
+[![Docker Stars](https://img.shields.io/docker/stars/onokatio/docker_bitcoin-tool-build.svg)]()
+[![Docker Pulls](https://img.shields.io/docker/pulls/onokatio/docker_bitcoin-tool-build.svg)]()
+[![Docker Pulls](https://img.shields.io/docker/automated/onokatio/docker_bitcoin-tool-build.svg)]()
+[![Docker Pulls](https://img.shields.io/docker/build/onokatio/docker_bitcoin-tool-build.svg)]()
+
 bitcoind, bitcoin-cli, bitcoin-tx, bitcoin-qt, libbitcoinなど、bitcoinのインテグレーションツリーに入っているものを全てビルドするDockerfileです。
 ビルド済みのものはdockerhubに上がっています。
 
