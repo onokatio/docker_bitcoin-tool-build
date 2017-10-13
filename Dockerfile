@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-RUN apk --no-cache --update add git autoconf automake libtool g++=6.4.0-r5 pkgconf make boost-dev libressl-dev libevent-dev qt-dev
+RUN apk --no-cache --update add git autoconf automake libtool g++=6.4.0-r5 pkgconf make boost-dev libressl-dev libevent-dev qt5-qttools qt5-qttools-dev qt5-qtbase qt5-qtbase-dev
 	RUN git clone -b v0.15.0.1 --depth 1 https://github.com/bitcoin/bitcoin /bitcoin-src \
 	&& cd /bitcoin-src \
 	&& BITCOIN_ROOT=$(pwd) \
