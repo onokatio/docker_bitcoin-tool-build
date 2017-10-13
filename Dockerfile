@@ -6,9 +6,9 @@ ENV bitcoin_archive_url https://github.com/bitcoin/bitcoin/archive/${bitcoin_ver
 ENV depend_packages "git autoconf automake libtool g++=${gpp_version} make boost-dev libressl-dev db-dev miniupnpc-dev qt5-qtbase-dev qt5-qttools-dev protobuf-dev libqrencode-dev libevent-dev chrpath"
 ENV make_worker 3
 
-RUN apk --no-cache --update add ${depend_packages} \
+RUN apk --no-cache --update add ${depend_packages}
 # && git clone -b v0.15.0.1 --depth 1 https://github.com/bitcoin/bitcoin /bitcoin-src \
-&& mkdir /bitcoin-build \
+RUN mkdir /bitcoin-build \
 && wget "${bitcoin_archive_url}" -O /bitcoin.tar.gz \
 && tar xvf /bitcoin.tar.gz -C /bitcoin-build --strip-components 1 \
 && cd /bitcoin-build \
